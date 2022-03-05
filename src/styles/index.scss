@@ -1,0 +1,18 @@
+@import "global";
+
+header {
+  width: calc(100% - $page-margin*2);
+  margin: $page-margin;
+}
+
+main {
+  width: calc(100% - $page-margin*2);
+  margin: $page-margin;
+  min-height: 500px;
+}
+
+
+
+
+
+

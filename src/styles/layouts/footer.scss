@@ -1,0 +1,6 @@
+@import "../variables";
+
+footer {
+  width: calc(100% - $page-margin*2);
+  margin: $page-margin;
+}
