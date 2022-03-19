@@ -10,6 +10,9 @@ header {
     justify-content: space-between;
     align-items: center;
 
+    .logo {
+      z-index: 4;
+    }
 
     .navbar {
       display: flex;

@@ -5,7 +5,7 @@ import '../../styles/layouts/header.scss'
 import { ROUTES } from '../../data/env'
 
 const Logo = ({}) => (
-    <a href={'/'}>
+    <a href={'/'} className="logo">
         <img src={LogoImg} alt="Logo" height={80} />
     </a>
 )
