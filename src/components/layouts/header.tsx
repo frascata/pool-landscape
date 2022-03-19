@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import LogoImg from '../../images/logo.png'
 
 import '../../styles/layouts/header.scss'
