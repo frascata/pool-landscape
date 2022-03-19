@@ -1,1 +1,19 @@
+$black: #231f20;
+
 $page-margin: 20px;
+
+
+$breakpoints: (
+        xxsmall: 0px,
+        xsmall: 360px,
+        small: 540px,
+        medium: 768px,
+        medium-plus: 1024px,
+        large: 1280px,
+        xlarge: 1440px,
+        xxlarge: 1920px
+);
+
+$tablet-width: 768px;
+
+$desktop-width: 1280px;

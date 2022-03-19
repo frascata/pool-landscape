@@ -20,22 +20,38 @@ const Navbar = ({}) => (
     </ul>
 )
 
-const MobileMenu = ({}) => (
-    <div className="mobile-icon">
-        <div className="menu_icon">
-            <span className="one"></span>
-            <span className="two"></span>
-            <span className="three"></span>
+const MobileMenu = ({}) => {
+    const openMobileMenu = () => {
+        document.querySelector('.mobile-menu-btn')?.classList.toggle('not-active')
+        document.querySelector('.mobile-menu')?.classList.toggle('hide')
+    }
+
+    return (
+        <div className="mobile-menu-content">
+            <div className="mobile-menu-btn active not-active" onClick={openMobileMenu}>
+                <span />
+                <span />
+                <span />
+            </div>
+            <div className="mobile-menu hide">
+                <ul className="navbar-mobile">
+                    {ROUTES.map((route, index) => (
+                        <li className="" key={index}>
+                            <a href={route.url}>{route.label}</a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
-    </div>
-)
+    )
+}
 
 const Header = ({ style = {} }) => (
     <header style={style}>
         <div className="container">
             <Logo />
             <Navbar />
-            {/*<MobileMenu />*/}
+            <MobileMenu />
         </div>
     </header>
 )
