@@ -6,7 +6,6 @@ import Header from '../components/layouts/header'
 
 import '../styles/homepage/index.scss'
 
-// markup
 const IndexPage = () => {
     return (
         <main className="full">

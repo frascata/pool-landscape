@@ -1,0 +1,33 @@
+@import "../global";
+@import "../variables";
+@import "../breakpoints";
+
+main {
+  &.works-page {
+    .grid-container {
+      display: grid;
+      grid-gap: $default-margin;
+      grid-template-columns: repeat(2, calc(50% - #{$default-margin}));
+      width: calc(100% - #{$default-margin});
+
+      @include Mobile() {
+        grid-template-columns: 100%;
+        width: 100%;
+      }
+    }
+
+    .grid-item {
+      transition: opacity 0.3s;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      &:hover {
+        opacity: 0.1;
+      }
+    }
+
+  }
+}
