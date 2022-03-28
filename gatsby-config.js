@@ -1,6 +1,6 @@
 /** @type {import('gatsby).GatsbyConfig} */
 module.exports = {
-    pathPrefix: '/pool-website',
+    pathPrefix: '/pool-landscape',
     siteMetadata: {
         title: ``,
         siteUrl: `https://www.yourdomain.tld`
