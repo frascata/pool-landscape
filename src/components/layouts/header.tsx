@@ -2,10 +2,10 @@ import React from 'react'
 import LogoImg from '../../images/logo.png'
 
 import '../../styles/layouts/header.scss'
-import { ROUTES } from '../../data/env'
+import { BASE_URL, ROUTES } from '../../data/env'
 
 const Logo = ({}) => (
-    <a href={'/'} className="logo">
+    <a href={`${BASE_URL}/`} className="logo">
         <img src={LogoImg} alt="Logo" height={80} />
     </a>
 )

@@ -7,10 +7,12 @@ import '../styles/lavori/index.scss'
 
 const WorkLinkItem = ({ image, title, link }) => {
     return (
-        <a className="grid-item" href={link}>
-            <img alt={title} src={image} />
-            <span>{title}</span>
-        </a>
+        <div className="grid-item">
+            <a href={link} style={{ backgroundImage: `url(${image})` }}>
+                <img alt={title} src={image} />
+                <div>{title}</div>
+            </a>
+        </div>
     )
 }
 

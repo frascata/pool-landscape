@@ -1,4 +1,4 @@
-const BASE_URL = process.env.NODE_ENV === 'production' ? 'https://frascata.github.io/pool-landscape' : ''
+export const BASE_URL = process.env.NODE_ENV === 'production' ? 'https://frascata.github.io/pool-landscape' : ''
 
 export const ROUTES = [
     {
