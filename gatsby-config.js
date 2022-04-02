@@ -3,9 +3,32 @@ module.exports = {
     pathPrefix: '/pool-landscape',
     siteMetadata: {
         title: ``,
-        siteUrl: `https://www.yourdomain.tld`
+        siteUrl: `https://www.pool-landscape.it`
     },
     plugins: [
+        {
+            resolve: `gatsby-transformer-yaml`,
+            options: {
+                // Conditionally set the typeName so that we both use a lowercased and capitalized type name
+                typeName: ({ node }) => {
+                    const name = node.sourceInstanceName
+                    if (name === `products`) {
+                        return `Product`
+                    }
+                    if (name === `projects`) {
+                        return `Project`
+                    }
+                    return name
+                }
+            }
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: `${__dirname}/projects`,
+                name: `projects`
+            }
+        },
         'gatsby-plugin-sass',
         {
             resolve: 'gatsby-plugin-google-analytics',
@@ -19,7 +42,7 @@ module.exports = {
         {
             resolve: 'gatsby-plugin-manifest',
             options: {
-                icon: 'src/images/icon.png'
+                icon: `${__dirname}/src/images/icon.png`
             }
         },
         'gatsby-plugin-mdx',
@@ -29,7 +52,7 @@ module.exports = {
             resolve: 'gatsby-source-filesystem',
             options: {
                 name: 'images',
-                path: './src/images/'
+                path: `${__dirname}/src/images/`
             },
             __key: 'images'
         },
@@ -37,7 +60,7 @@ module.exports = {
             resolve: 'gatsby-source-filesystem',
             options: {
                 name: 'pages',
-                path: './src/pages/'
+                path: `${__dirname}/src/pages/`
             },
             __key: 'pages'
         }
