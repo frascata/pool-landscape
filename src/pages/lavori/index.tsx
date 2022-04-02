@@ -25,7 +25,7 @@ const ProjectsPage = ({ data }) => {
                 <div className="grid-container">
                     {data.projects.nodes.map((project) => {
                         const projectEdge = data.images.edges.filter((edge) => edge.node.original.src.indexOf(project.meta.slug) === -1) // find image by name
-                        return <ProjectItem key={project.meta.id} image={projectEdge[0].node.gatsbyImageData} title={project.name} link={project.nameSlug} />
+                        return <ProjectItem key={project.meta.id} image={projectEdge[0].node.gatsbyImageData} title={project.name} link={project.url} />
                     })}
                 </div>
             </main>
@@ -40,7 +40,7 @@ export const query = graphql`
         projects: allProject {
             nodes {
                 name
-                nameSlug: gatsbyPath(filePath: "/lavori/{Project.name}")
+                url: gatsbyPath(filePath: "/lavori/{Project.meta__slug}")
                 meta {
                     id
                     slug
