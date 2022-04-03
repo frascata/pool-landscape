@@ -1,20 +1,12 @@
-import * as React from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
-import { Link } from 'gatsby'
-import Layout from '../../components/layouts'
-import { ProjectItem } from './index'
-
-const ProjectView = ({ project }) => {
-    return (
-        <Layout>
-            <main className="works-page">{project.name}</main>
-        </Layout>
-    )
-}
+import { ProjectView } from '../../components/ProjectView'
 
 const Project = ({ data }) => {
-    const { project } = data
-    return <ProjectView project={project} />
+    const { project, allGallery, allProjects } = data
+    const projectGallery = allGallery.edges.filter((edge) => edge.node.original.src.indexOf(`project-gallery-${project.meta.slug}`) !== -1)
+    const gallery = projectGallery.map((pGallery) => ({ gatsbyImageData: pGallery.node.gatsbyImageData, alt: pGallery.node.id }))
+    return <ProjectView project={project} gallery={gallery} allProjects={allProjects.nodes} />
 }
 
 export default Project
@@ -25,6 +17,29 @@ export const query = graphql`
             name
             subtitle
             description
+            meta {
+                slug
+            }
+        }
+        allGallery: allImageSharp(filter: { original: { src: { regex: "/project-gallery-/" } } }) {
+            edges {
+                node {
+                    gatsbyImageData
+                    original {
+                        src
+                    }
+                    id
+                }
+            }
+        }
+        allProjects: allProject {
+            nodes {
+                name
+                url: gatsbyPath(filePath: "/lavori/{Project.meta__slug}")
+                meta {
+                    slug
+                }
+            }
         }
     }
 `
