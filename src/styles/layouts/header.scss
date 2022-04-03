@@ -3,6 +3,9 @@
 @import "mobile-menu";
 
 header {
+  width: calc(100% - #{$default-page-margin}*2);
+  margin: $default-page-margin;
+
   .container {
     display: flex;
     flex-direction: row;

@@ -1,8 +1,8 @@
 @import "../variables";
 
 footer {
-  width: calc(100% - #{$page-margin} * 2);
-  margin: $page-margin;
+  width: calc(100% - #{$default-page-margin}*2);
+  margin: $default-page-margin;
 
   border-top: 1px solid $black;
 

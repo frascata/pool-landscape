@@ -3,7 +3,8 @@ $text-color: #777;
 
 $default-margin: 20px;
 
-$page-margin: 20px;
+$default-page-margin: 30px;
+$homepage-margin: calc(#{$default-page-margin}/2);
 
 $breakpoints: (
         xxsmall: 0px,

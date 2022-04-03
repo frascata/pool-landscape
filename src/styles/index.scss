@@ -1,15 +1,29 @@
 @import "global";
 @import "variables";
+@import "breakpoints";
 
-header {
-  width: calc(100% - #{$page-margin}*2);
-  margin: $page-margin;
-}
 
 main {
-  width: calc(100% - #{$page-margin}*2);
-  margin: $page-margin;
+  width: calc(100% - #{$default-page-margin} * 2);
+  margin: $default-page-margin;
   min-height: 500px;
+
+  &.full {
+    position: absolute;
+    width: calc(100% - #{$homepage-margin} * 2);
+    height: calc(100% - #{$homepage-margin} * 2);
+    margin: 0;
+    top: $homepage-margin;
+    left: $homepage-margin;
+
+    header {
+      position: absolute;
+      width: calc(100% - #{$homepage-margin} * 2);
+      z-index: 2;
+      margin: $homepage-margin;
+    }
+  }
+
 }
 
 

@@ -1,24 +1,19 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import { Link } from 'gatsby'
+import Layout from '../../components/layouts'
+import { ProjectItem } from './index'
 
-function ProjectView({ project }) {
+const ProjectView = ({ project }) => {
     return (
-        <div className="wrapper">
-            <header>
-                <Link to="/">Go back to "Home"</Link>
-            </header>
-            <main>
-                <h1>{project.name}</h1>
-                <h2>{project.subtitle}</h2>
-                <p>{project.description}.</p>
-            </main>
-        </div>
+        <Layout>
+            <main className="works-page">{project.name}</main>
+        </Layout>
     )
 }
 
-function Project(props) {
-    const { project } = props.data
+const Project = ({ data }) => {
+    const { project } = data
     return <ProjectView project={project} />
 }
 

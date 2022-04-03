@@ -4,7 +4,7 @@ import { GALLERY_IMAGES } from '../data/homepage'
 import { SwiperHomeGallery } from '../components/homepage/gallery'
 import Header from '../components/layouts/header'
 
-import '../styles/homepage/index.scss'
+import '../styles/index.scss'
 
 const IndexPage = () => {
     return (
