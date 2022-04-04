@@ -42,7 +42,7 @@ export const ProjectView = ({ project, gallery, allprojects }) => {
                     <h2>{project.subtitle}</h2>
                 </div>
                 <div className="project-description">
-                    <p>{project.description}</p>
+                    <p dangerouslySetInnerHTML={{ __html: project.description }} />
                 </div>
                 <div className="project-gallery">
                     <ProjectGallery gallery={gallery} />
