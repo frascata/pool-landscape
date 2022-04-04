@@ -21,6 +21,11 @@ main {
       width: calc(100% - #{$homepage-margin} * 2);
       z-index: 2;
       margin: $homepage-margin;
+
+      .mobile-menu-content .mobile-menu-btn {
+        top: 40px;
+        right: -15px;
+      }
     }
   }
 
