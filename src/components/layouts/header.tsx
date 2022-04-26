@@ -1,12 +1,12 @@
 import React from 'react'
-import LogoImg from '../../images/logo.png'
-
-import '../../styles/layouts/header.scss'
+import { Link } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 import { BASE_URL, ROUTES } from '../../data/env'
+import '../../styles/layouts/header.scss'
 
 const Logo = ({}) => (
     <a href={`${BASE_URL}/`} className="logo">
-        <img src={LogoImg} alt="Logo" height={80} />
+        <StaticImage src={'../../images/logo.png'} alt="Logo" height={80} />
     </a>
 )
 
@@ -14,7 +14,7 @@ const Navbar = ({}) => (
     <ul className="navbar">
         {ROUTES.map((route, index) => (
             <li className="" key={index}>
-                <a href={route.url}>{route.label}</a>
+                <Link to={route.url}>{route.label}</Link>
             </li>
         ))}
     </ul>
