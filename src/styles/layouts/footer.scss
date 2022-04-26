@@ -4,6 +4,7 @@ footer {
   width: calc(100% - #{$default-page-margin}*2);
   margin: $default-page-margin;
   border-top: 1px solid $black;
+  padding-top: 10px;
   padding-bottom: 10px;
 
   .socials {

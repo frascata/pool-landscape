@@ -1,10 +1,29 @@
 import React from 'react'
 import Layout from './layouts'
+import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
+import { ROUTES } from '../data/env'
 import '../styles/components/project-view.scss'
 import '../styles/components/project-header.scss'
 import '../styles/components/project-description.scss'
+import '../styles/components/project-navigation.scss'
+
+const ProjectHeader = ({ name, subtitle }) => {
+    return (
+        <div className="project-header">
+            <h1>{name}</h1>
+            <h2>{subtitle}</h2>
+        </div>
+    )
+}
+const ProjectDescription = ({ description }) => {
+    return (
+        <div className="project-description">
+            <p dangerouslySetInnerHTML={{ __html: description }} />
+        </div>
+    )
+}
 
 /*
  * https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_grid_responsive
@@ -19,35 +38,49 @@ const columnPartition = (arr, length) => {
 const ProjectGallery = ({ gallery }) => {
     const imagesColumns = columnPartition(gallery, 3)
     return (
-        <div className="row">
-            {imagesColumns.map((column, index) => {
-                return (
-                    <div key={index} className="column">
-                        {column.map((image, index) => (
-                            <GatsbyImage key={index} alt={image.alt} image={image.gatsbyImageData} />
-                        ))}
-                    </div>
-                )
-            })}
+        <div className="project-gallery">
+            <div className="row">
+                {imagesColumns.map((column, index) => {
+                    return (
+                        <div key={index} className="column">
+                            {column.map((image, index) => (
+                                <GatsbyImage key={index} alt={image.alt} image={image.gatsbyImageData} />
+                            ))}
+                        </div>
+                    )
+                })}
+            </div>
         </div>
     )
 }
 
-export const ProjectView = ({ project, gallery, allprojects }) => {
+const ProjectNavigation = ({ allProjects }) => {
+    const allProjectRoute = ROUTES.find((route) => route.url.indexOf('lavori') !== -1)
+    return (
+        <div className="project-navigation">
+            <p>
+                <Link to={allProjectRoute.url}>TUTTI</Link>
+                {allProjects.map((project) => {
+                    return (
+                        <Link key={project.meta.slug} to={project.url} activeClassName="active">
+                            {project.name}
+                        </Link>
+                    )
+                })}
+            </p>
+        </div>
+    )
+}
+
+export const ProjectView = ({ project, gallery, allProjects }) => {
+    const { name, subtitle, description } = project
     return (
         <Layout>
             <main>
-                <div className="project-header">
-                    <h1>{project.name}</h1>
-                    <h2>{project.subtitle}</h2>
-                </div>
-                <div className="project-description">
-                    <p dangerouslySetInnerHTML={{ __html: project.description }} />
-                </div>
-                <div className="project-gallery">
-                    <ProjectGallery gallery={gallery} />
-                </div>
-                <div className="project-navigation"></div>
+                <ProjectHeader {...{ name, subtitle }} />
+                <ProjectDescription {...{ description }} />
+                <ProjectGallery {...{ gallery }} />
+                <ProjectNavigation {...{ allProjects }} />
             </main>
         </Layout>
     )
