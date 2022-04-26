@@ -1,12 +1,80 @@
 - meta:
     id: 1
     slug: albignasego
-  name: Albignasego
-  subtitle: Parco bellissimo
-  description: Da area marginale incolta a parco pubblico che connette tessuto urbano e campagna coltivata. <br/><br/>Il progetto del Parco della Costituzione di Albignasego, sviluppato con Mide Architetti, parte da una riflessione alla scalaterritoriale, con l’obiettivo di coniugare e trovare un equilibrio tra costruito e paesaggio, tra funzionalità e ambiente, innescando nuove connessioni.Gli elementi del paesaggio dalla forte vocazione campestre vengono reinterpretati all’interno del parco e diventano elementicaratterizzanti, memoria storica, e al contempo funzionali alle nuove attività. Una trama di percorsi secondari scandisce lasuddivisione degli spazi, assicurando la permeabilità dell’area e la connessione tra le attività, pensate per diverse tipologie diutenze e di utilizzo durante tutto il corso dell’anno.
+  name: PARCO DELLA COSTITUZIONE
+  subtitle: Albignasego (PD) 2021
+  description: > 
+    Da area marginale incolta a parco pubblico che connette tessuto urbano e campagna coltivata. Il progetto del Parco della Costituzione di Albignasego, sviluppato con Mide Architetti, parte da una riflessione alla scala territoriale, con l’obiettivo di coniugare e trovare un equilibrio tra costruito e paesaggio, tra funzionalità e ambiente, innescando nuove connessioni. Gli elementi del paesaggio dalla forte vocazione campestre vengono reinterpretati all’interno del parco e diventano elementi caratterizzanti, memoria storica, e al contempo funzionali alle nuove attività. Una trama di percorsi secondari scandisce la suddivisione degli spazi, assicurando la permeabilità dell’area e la connessione tra le attività, pensate per diverse tipologie di utenze e di utilizzo durante tutto il corso dell’anno.
 - meta:
     id: 2
+    slug: giardino-sui-colli-pesaresi
+  name: GIARDINO SUI COLLI PESARESI
+  subtitle: Pesaro 2021
+  description: >
+    Bellezza colta e contemporanea, eleganza esclusiva e raffinata caratterizzano gli spazi esterni del giardino, che si trova immerso nelle colline pesaresi. 
+    Un progetto di stile coordinato e coerente, dove architettura, giardino e arredamento sono tutt’uno e ogni ambiente è pensato per chi lo abitera':
+    l’orto giardino su vasche in corten e l’angolo delle rose, l’ingresso pedonale, all’ombra di scultorei pini secolari, che viene guidato da una seduta e gruppi morbidi di arbusti, il falò immerso nelle ortensie, il muro scenografico. Un sistema di percorsi regolari organizza lo spazio e la fruizione del giardino e delle due aree più significative dedicate alla piscina e al campo da padel richiesti dalla committenza. Arbusti con volumi, texture e orditure diverse permettono di creare una quinta visiva uniforme dalla casa verso il giardino.
+- meta:
+    id: 3
+    slug: nel-bosco-dei-corbezzoli
+  name: NEL BOSCO DEI CORBEZZOLI
+  subtitle: Arezzo 2019
+  description: >
+    L’area del Bosco di Sargiano nel quale il progetto si inserisce rappresenta un elemento di grande valore naturalistico da rispettare, offrendo spunti progettuali interessanti relativi sia alla scelta dei materiali che della vegetazione.
+    Il progetto valorizza le alberature esistenti, specialmente querce e corbezzoli, elementi peculiari all’interno del giardino. Alberi a spalliera sono utilizzati al fine di separare visivamente la zona della piscina dalla zona del parcheggio.  Macchie di grandi arbusti vengono disposte all’interno del bosco e in corrispondenza della radura boscata per garantire colore, volume e profondità visiva. Una doppia parentesi di graminacee e fioriture effimere avvolge la zona della piscina.
+- meta:
+    id: 4
+    slug: riqualificazione–giardini-pubblici
+  name: RIQUALIFICAZIONE GIARDINI PUBBLICI
+  subtitle: Castiglion Fiorentino 2021
+  description: >
+    La riqualificazione dei giardini pubblici è un’occasione per ridisegnare un luogo storico dei primi del ‘900, ormai snaturato da una stratificazione di interventi successivi, e per restituire una nuova identità alla porta di accesso al centro storico del paese, consegnando ai cittadini uno spazio accogliente e vitale in una delle più belle terrazze sulla Val di Chiana.
+    La vegetazione torna ad essere protagonista come nel disegno originario, grazie ad un sistema di aiuole che descrivono lo spazio delimitate da sedute perimetrali; la nuova pavimentazione drenante permette una fruizione più sicura e gli elementi architettonici sono stati ripensati cercando un giusto compromesso tra funzionalità ed estetica, anche attraverso una selezione unitaria e attenta dei materiali.
+- meta:
+    id: 5
+    slug: impresa-e-territorio
+  name: IMPRESA E TERRITORIO
+  subtitle: Ancona 2015 - in corso
+  description: >
+    Dalla volontà di creare una forte sinergia con il territorio nel quale è inserita, nasce la collaborazione con l’impresa Loccioni. 
+    A partire da una visione strategica sulle diverse aree di proprietà, lo studio mira a sviluppare progettualità in grado di
+    valorizzare non solo le singole aree private ma l’intero territorio, lavorando con la biodiversità, la diversificazione agricola, la progettazione partecipata ed un uso coerente delle energie rinnovabili. 
+    Questo processo culturale si fonda sulla diffusione della conoscenza con un focus sul rapporto tra impresa, agricoltura, tecnologia e accoglienza, sulla diffusione della cultura attraverso l’organizzazione di eventi formativi, di mostre temporanee, di mercati alimentari e molto altro. Questa “sosta creativa, collettiva e condivisa” potrà alimentare il senso di appartenenza al luogo, ed essere motore per la condivisione delle idee, e nuovo polo di attivazione territoriale.
+- meta:
+    id: 6
+    slug: hotel-regina-adelaide
+  name: HOTEL REGINA ADELAIDE
+  subtitle: Garda (VR) 2019
+  description: >
+    La riqualificazione del giardino dell’hotel sulle rive del Garda diventa l’occasione per migliorarne la fruibilità e caratterizzarlo dal punto di vista della vegetazione: un giardino dalla doppia anima, formale e naturaliforme al contempo.
+    La localizzazione dell’area di intervento, caratterizzata dal particolare microclima del lago,
+    influenza la scelta delle specie vegetali, così come il contesto storico paesaggistico. La varietà della flora mediterranea, i
+    vigneti, le coltivazioni di cereali, le limonaie con le loro strutture peculiari, costituiscono il paesaggio storico culturale di riferimento per gli aspetti vegetazionali.
+    Alcuni elementi del giardino storico all’italiana sono il punto di partenza per definire la strategia progettuale dello spazio aperto.
+    Il nuovo progetto reinterpreta in chiave contemporanea questi elementi, calandoli nel contesto storico e paesaggistico di riferimento.
+- meta:
+    id: 7
+    slug: una-nuova-connessione-ecologica
+  name: UNA NUOVA CONNESSIONE ECOLOGICA
+  subtitle: Zagabria 2018
+  description: >
+    Il progetto di fattibilità per un boulevard ciclopedonale di 6 Km, sviluppato per il Comune di Zagabria in collaborazione con l’Arch. Alvise Pagnacco, si basa su un’analisi accurata dell’area lungo il torrente Črnomerec, con le sue criticità ma, soprattutto, potenzialità in termini di connessione ecologica con gli altri nodi della rete esistente.
+    In questo paesaggio la strategia diventa strumento per costruire una visione futura del luogo, per trasformarlo in un ambiente piacevole e sicuro per tutti gli abitanti e, allo stesso tempo, per contrastare gli effetti del cambiamento climatico. 
+    I principali temi approfonditi dal progetto sono, infatti, i percorsi per la mobilità lenta e lo studio di specie vegetali che purificano l’aria e migliorano l’inquinamento dei suoli. In questo scenario nuovi spazi pubblici di qualità rendono vitali i quartieri che affacciano sul boulevard ciclopedonale offrendo spazi di sosta, relax e eventi.
+- meta:
+    id: 8
+    slug: borgo-pignano-florence
+  name: BORGO PIGNANO FLORENCE
+  subtitle: Firenze 2022 - in corso
+  description: >
+    Il progetto di valorizzazione paesaggistica della proprietà, una villa inserita nelle colline di Firenze che verrà trasformata in un resort di lusso, punta a enfatizzare il genius loci, nel rispetto delle necessità derivanti dalla nuova funzione dell’edificio, grazie alla lettura delle tracce rinvenute nel giardino, alla loro reinterpretazione e all’introduzione di elementi di contemporaneità. 
+    Queste azioni permettono di definire diverse ambientazioni: il Giardino segreto,
+    fatto di scorci nascosti, di dense masse di alloro e di sedute poste all’ombra di grandi lecci; il Giardino delle delizie, un luogo di visuali aperte sul grande cedro e sul paesaggio circostante; la Corte delle camelie e delle ortensie, un piccolo spazio ombroso dedicato alle aree esterne delle depandance; la Passeggiata nell’oliveto e la piscina.
+- meta:
+    id: 9
     slug: colle-allegro
-  name: Colle Triste
-  subtitle: Parco bruttissimo
-  description: Digestible smart electronics that can transmitt some kind of experience or meditation to one's head
+  name: COLLE ALLEGRO
+  subtitle: Arezzo 2022 - in corso
+  description: >
+    Il progetto del giardino di questa vasta proprietà sui colli aretini si rapporta con i grandi alberi presenti all’interno del parco, che ne raccontano la bellezza secolare.
+    Diversi ambiti caratterizzano lo spazio esterno: il giardino all’italiana, minimale e rigoroso, organizzato secondo una struttura semplice e leggibile che scandisce lo spazio; la terrazza alberata del fronte villa, una passeggiata sensoriale da percorrere all’ombra dei grandi alberi secolari guidata da bordure profumate formate da arbusti tappezzanti dalle fioriture scalari; il palmeto, un angolo dal carattere tropicale enfatizzato dalla presenza di arbusti scultorei in una matrice di tappezzanti; il grande parco di ingresso cinto da cipressi svettanti e gruppi di olivi, dove i maestosi lecci secolari sono i protagonisti.

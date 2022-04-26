@@ -4,12 +4,10 @@ import { Link } from 'gatsby'
 import '../styles/components/projects-grid.scss'
 
 const ProjectItem = ({ image, title, link }) => {
-    const img = getImage(image)
-
     return (
         <div className="grid-item">
             <Link to={link}>
-                <div className="image-wrapper">{img && <GatsbyImage image={img} alt={title} />}</div>
+                <div className="image-wrapper">{image && <GatsbyImage image={image} alt={title} />}</div>
                 <div className="caption">{title}</div>
             </Link>
         </div>
@@ -17,11 +15,13 @@ const ProjectItem = ({ image, title, link }) => {
 }
 
 export const ProjectsGrid = ({ data }) => {
+    const defaultImage = data.defaultImage.edges[0].node.gatsbyImageData
     return (
         <div className="grid-container">
             {data.projects.nodes.map((project) => {
                 const projectEdge = data.images.edges.filter((edge) => edge.node.original.src.indexOf(project.meta.slug) !== -1) // find image by name
-                return <ProjectItem key={project.meta.id} image={projectEdge[0].node.gatsbyImageData} title={project.name} link={project.url} />
+                const coverImage = projectEdge.length ? projectEdge[0].node.gatsbyImageData : defaultImage
+                return <ProjectItem key={project.meta.id} image={coverImage} title={project.name} link={project.url} />
             })}
         </div>
     )

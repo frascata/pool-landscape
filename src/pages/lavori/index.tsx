@@ -38,5 +38,15 @@ export const query = graphql`
                 }
             }
         }
+        defaultImage: allImageSharp(filter: { original: { src: { regex: "/project-cover-default/" } } }) {
+            edges {
+                node {
+                    gatsbyImageData
+                    original {
+                        src
+                    }
+                }
+            }
+        }
     }
 `
