@@ -20,7 +20,7 @@ const Footer = ({ style = {} }) => (
             </a>
         </div>
         <div className="company-info">
-            © 2017 Pool Landscape s.r.l | <a href="mailto:info@pool-landscape.it">info@pool-landscape.it</a> | P. Iva 02653120416
+            © 2022 Pool Landscape s.r.l | <a href="mailto:info@pool-landscape.it">info@pool-landscape.it</a> | P. Iva 02653120416
         </div>
     </footer>
 )
