@@ -3,7 +3,7 @@ import Layout from '../components/layouts'
 
 import ProfiloImg from '../images/profilo/profilo.jpeg'
 
-import '../styles/contatti/index.scss'
+import '../styles/about/index.scss'
 
 const AboutPage = () => {
     return (
