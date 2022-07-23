@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
 import { BASE_URL, ROUTES } from '../../data/env'
+import LogoImg from '../../images/logo.png'
 import '../../styles/layouts/header.scss'
 
 const Logo = ({}) => (
     <a href={`${BASE_URL}/`} className="logo">
-        <StaticImage src={'../../images/logo.png'} alt="Logo" height={80} />
+        <img src={LogoImg} alt="Logo" height={80} />
     </a>
 )
 
