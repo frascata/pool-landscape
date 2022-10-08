@@ -45,7 +45,6 @@ module.exports = {
         icon: `${__dirname}/src/images/icon.png`
       }
     },
-    'gatsby-plugin-mdx',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
