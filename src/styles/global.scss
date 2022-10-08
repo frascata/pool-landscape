@@ -1,0 +1,31 @@
+@import "variables";
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+strong {
+  font-weight: bold;
+}

@@ -1,0 +1,35 @@
+@import "../variables";
+
+footer {
+  width: calc(100% - #{$default-page-margin}*2);
+  margin: $default-page-margin;
+  border-top: 1px solid $black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  .socials {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      padding: 16px;
+    }
+  }
+
+  .company-info {
+    text-align: center;
+
+    a {
+      text-decoration: none;
+      color: $text-color;
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+}

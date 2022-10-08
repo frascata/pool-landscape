@@ -1,0 +1,37 @@
+@import "global";
+@import "variables";
+@import "breakpoints";
+
+main {
+  width: calc(100% - #{$default-page-margin} * 2);
+  margin: $default-page-margin;
+  min-height: 500px;
+
+  &.full {
+    position: absolute;
+    width: calc(100% - #{$homepage-margin} * 2);
+    height: calc(100% - #{$homepage-margin} * 2);
+    margin: 0;
+    top: $homepage-margin;
+    left: $homepage-margin;
+
+    header {
+      position: absolute;
+      width: calc(100% - #{$homepage-margin} * 2);
+      z-index: 2;
+      margin: $homepage-margin;
+
+      .mobile-menu-content .mobile-menu-btn {
+        top: 40px;
+        right: -15px;
+      }
+    }
+  }
+
+}
+
+
+
+
+
+

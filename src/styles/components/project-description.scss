@@ -1,0 +1,14 @@
+@import "../variables";
+@import "../breakpoints";
+
+.project-description {
+  padding: 30px;
+  text-align: center;
+  padding-left: 15%;
+  padding-right: 15%;
+
+  @include Mobile() {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
