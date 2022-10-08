@@ -72,6 +72,7 @@ module.exports = {
           "G-VZF4EKDJWK", // Google Analytics
         ]
       }
-    }
+    },
+    'gatsby-plugin-gatsby-cloud'
   ]
 }
