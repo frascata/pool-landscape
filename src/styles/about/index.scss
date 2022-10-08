@@ -4,42 +4,15 @@
 
 main {
   &.about-page {
-    display: flex;
-    flex-direction: column;
-
-    .col-2 {
-      display: flex;
-      flex-direction: row;
+    .floated {
+      float: left;
+      width: 400px;
+      margin-right: $default-margin;
+      margin-bottom: $default-margin;
 
       @include Mobile() {
-        flex-direction: column;
-      }
-
-      img {
-        height: 300px;
-
-        @include Mobile() {
-          width: 100%;
-          height: auto;
-        }
-      }
-
-      p {
-        margin-left: $default-margin;
-
-        @include Mobile() {
-          margin-left: 0;
-        }
-
-        &:first-child {
-          margin-top: 0;
-
-          @include Mobile() {
-            margin-top: 16px;
-          }
-        }
+        width: 100%;
       }
     }
-
   }
 }
