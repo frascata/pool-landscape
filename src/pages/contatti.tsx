@@ -2,7 +2,7 @@ import * as React from 'react'
 import Layout from '../components/layouts'
 
 import '../styles/contatti/index.scss'
-import ContattiImg from "../images/contatti/contatti.jpeg";
+import ContattiImg from '../images/contatti/contatti.jpg'
 
 const ContactsPage = () => {
     return (
