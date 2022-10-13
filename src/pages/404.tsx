@@ -1,16 +1,15 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import LogoImg from "../images/logo.png";
+import '../styles/index.scss'
 
 // styles
 const pageStyles = {
-  color: "#232129",
   padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
 const headingStyles = {
   marginTop: 0,
   marginBottom: 64,
-  maxWidth: 320,
 }
 
 const paragraphStyles = {
@@ -28,14 +27,14 @@ const codeStyles = {
 const NotFoundPage = () => {
   return (
     <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
+      <title>404 Not found</title>
+      <h1 style={headingStyles}>Ops pagina non trovata</h1>
       <p style={paragraphStyles}>
-        Sorry{" "}
+        Mi dispiace{" "}
         <span role="img" aria-label="Pensive emoji">
           😔
         </span>{" "}
-        we couldn’t find what you were looking for.
+        non abbiamo trovato la pagina che stavi cercando
         <br />
         {process.env.NODE_ENV === "development" ? (
           <>
@@ -45,7 +44,13 @@ const NotFoundPage = () => {
           </>
         ) : null}
         <br />
-        <Link to="/">Go home</Link>.
+        <br />
+        <Link to="/">
+          Torna a Pool Landscape
+          <br />
+          <br />
+          <img src={LogoImg} alt="Logo" width={131} height={80} />
+        </Link>.
       </p>
     </main>
   )
