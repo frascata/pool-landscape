@@ -1,15 +1,15 @@
 import * as React from 'react'
-import Layout from '../components/layouts'
+import {StaticImage} from "gatsby-plugin-image";
 
+import Layout from '../components/layouts'
 import '../styles/contatti/index.scss'
-import ContattiImg from '../images/contatti/contatti.jpg'
 
 const ContactsPage = () => {
     return (
         <Layout>
             <main className="contacts-page">
                 <div className="col-left">
-                    <img src={ContattiImg} alt={'Contatti'}/>
+                    <StaticImage src={'../images/contatti/contatti.jpg'} alt={'Contatti'}/>
                 </div>
                 <div className="col-right">
                     <div className="contact-email">

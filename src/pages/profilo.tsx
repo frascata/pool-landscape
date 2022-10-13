@@ -1,8 +1,7 @@
 import * as React from 'react'
+import {StaticImage} from "gatsby-plugin-image";
+
 import Layout from '../components/layouts'
-
-import ProfiloImg from '../images/profilo/profilo.jpg'
-
 import '../styles/about/index.scss'
 
 const AboutPage = () => {
@@ -11,7 +10,7 @@ const AboutPage = () => {
             <main className="about-page">
                 <div>
                     <p>
-                        <img className="floated" src={ProfiloImg} alt={'Profilo'}/>
+                        <StaticImage className="floated" src={'../images/profilo/profilo.jpg'} alt={'Profilo'}/>
                     </p>
                     <p>
                         Pool landscape è un progetto creativo tra architettura e paesaggio, fondato da Caterina Gerolimetto, Elisa Frappi e Ilaria Sangaletti. Saper cogliere lo spirito del luogo,
