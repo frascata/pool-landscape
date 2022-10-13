@@ -13,7 +13,6 @@ const AboutPage = () => {
                     <p>
                         <img className="floated" src={ProfiloImg} alt={'Profilo'}/>
                     </p>
-                    <p>Pool landscape è un progetto creativo tra architettura e paesaggio, fondato da Caterina Gerolimetto, Elisa Frappi e Ilaria Sangaletti.</p>
                     <p>
                         Pool landscape è un progetto creativo tra architettura e paesaggio, fondato da Caterina Gerolimetto, Elisa Frappi e Ilaria Sangaletti. Saper cogliere lo spirito del luogo,
                         la sua storia e reinterpretarne le
@@ -53,3 +52,11 @@ const AboutPage = () => {
 }
 
 export default AboutPage
+
+export const Head = () => (
+    <>
+        <title>Pool Landscape | Profilo</title>
+        <meta name="description"
+              content="Pool landscape è un progetto creativo tra architettura e paesaggio Dal giardino, alla piazza, all’ambito urbano, affianchiamo i clienti pubblici e privati con un approccio sostenibile e una visione condivisa dello spazio aperto in relazione alle esigenze dell’abitare contemporaneo"/>
+    </>
+)
