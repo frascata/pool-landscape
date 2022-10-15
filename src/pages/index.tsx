@@ -7,6 +7,8 @@ import Header from '../components/layouts/header'
 import {SwiperHomeGallery} from '../components/HomePageGallery'
 
 import {AnimatedLogo} from "../components/AnimatedLogo";
+import {CookieLawBanner} from "../components/CookieLawBanner";
+
 import '../styles/index.scss'
 
 
@@ -42,6 +44,7 @@ const IndexPage = ({data}) => {
                 <Header/>
                 <SwiperHomeGallery images={images}/>
             </main>
+            {isAnimationViewed && <CookieLawBanner/>}
         </>
     )
 }
