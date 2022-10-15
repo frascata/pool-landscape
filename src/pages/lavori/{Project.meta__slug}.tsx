@@ -21,7 +21,10 @@ export const query = graphql`
                 slug
             }
         }
-        allGallery: allImageSharp(filter: { original: { src: { regex: "/project-gallery-/" } } }) {
+        allGallery: allImageSharp(
+            filter: { original: { src: { regex: "/project-gallery-/" } } },
+            sort: { fields: [original___src], order: ASC }
+            ) {
             edges {
                 node {
                     gatsbyImageData
@@ -46,10 +49,10 @@ export const query = graphql`
 
 export const Head = ({data}) => {
     const {project} = data
-    const { name, subtitle, description } = project
+    const {name, subtitle, description} = project
 
     return <>
         <title>Pool Landscape | {name}</title>
-        <meta name="description" content={`${name} | ${subtitle} : ${description}` } />
+        <meta name="description" content={`${name} | ${subtitle} : ${description}`}/>
     </>
 }
