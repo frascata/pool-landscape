@@ -1,18 +1,48 @@
-import * as React from "react"
+// import * as React from "react"
+import React, {useState} from "react";
 import {graphql} from 'gatsby'
 
+import Cookies from 'js-cookie'
+import Header from '../components/layouts/header'
 import {SwiperHomeGallery} from '../components/HomePageGallery'
 
-import Header from '../components/layouts/header'
+import {AnimatedLogo} from "../components/AnimatedLogo";
 import '../styles/index.scss'
 
+
 const IndexPage = ({data}) => {
+    const animationCookie = Cookies.get('animation');
+
+    const [isAnimationViewed, setAnimationViewed] = useState(animationCookie);
+
+    const containerShowStyle = {
+        visibility: 'visible',
+        opacity: 1,
+        transition: 'opacity 0.5s ease-in'
+    }
+
+    const containerHiddenStyle = {
+        visibility: 'hidden',
+        opacity: 0
+    }
+
+    const onAnimationComplete = () => {
+        setAnimationViewed(true)
+        Cookies.set('animation', '1', {expires: 7})
+    }
+
     const images = data.images.edges.map((edge) => ({gatsbyImageData: edge.node.gatsbyImageData, alt: edge.node.id}))
-    return (
-        <main className="full">
-            <Header/>
-            <SwiperHomeGallery images={images}/>
-        </main>
+
+    return (<>
+            {!isAnimationViewed &&
+              <main className="full">
+                <AnimatedLogo onAnimationComplete={onAnimationComplete}/>
+              </main>}
+            <main className="full" style={isAnimationViewed ? containerShowStyle : containerHiddenStyle}>
+                <Header/>
+                <SwiperHomeGallery images={images}/>
+            </main>
+        </>
     )
 }
 
