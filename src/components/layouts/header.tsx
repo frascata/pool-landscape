@@ -6,7 +6,7 @@ import '../../styles/layouts/header.scss'
 
 const Logo = ({}) => (
     <a href={`${BASE_URL}/`} className="logo">
-        <img src={LogoImg} alt="Logo" height={80} />
+        <img src={LogoImg} alt="Logo" width={131} height={80} />
     </a>
 )
 

@@ -37,7 +37,6 @@ module.exports = {
       }
     },
     'gatsby-plugin-image',
-    'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',
@@ -72,6 +71,13 @@ module.exports = {
         ]
       }
     },
-    'gatsby-plugin-gatsby-cloud'
+    'gatsby-plugin-gatsby-cloud',
+    {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        // defines the environments where the tracking should be available  - default is ["production"]
+        environments: ['production', 'development']
+      }
+    }
   ]
 }

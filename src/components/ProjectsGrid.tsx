@@ -1,5 +1,5 @@
 import React from 'react'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
 import '../styles/components/projects-grid.scss'
 
