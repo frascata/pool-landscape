@@ -1,23 +1,35 @@
-import React, { useRef, useState } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import React, {useEffect} from 'react'
+import {Swiper, SwiperSlide, useSwiper} from 'swiper/react'
 
+import {GatsbyImage} from 'gatsby-plugin-image'
 // Import Swiper styles
 import 'swiper/css'
+import "swiper/css/effect-fade";
 import 'swiper/css/navigation'
+
 import 'swiper/css/pagination'
-
 // import required modules
-import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from 'swiper'
 
+import {Navigation, Pagination, Keyboard, Autoplay, EffectFade} from 'swiper'
 import '../styles/homepage/gallery.scss'
-import { GatsbyImage } from 'gatsby-plugin-image'
 
-export const SwiperHomeGallery = ({ images }) => (
-    <Swiper cssMode={true} navigation={true} pagination={true} mousewheel={true} keyboard={true} autoplay={true} modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]} className="mySwiper">
+export const SwiperHomeGallery = ({images}) => {
+    return <Swiper spaceBetween={30}
+                   effect={"fade"}
+                   navigation={true}
+                   pagination={{
+                       clickable: true,
+                   }}
+                   keyboard={{
+                       enabled: true,
+                   }}
+                   autoplay={true}
+                   modules={[Autoplay, EffectFade, Navigation, Pagination, Keyboard]}
+                   className="mySwiper">
         {images.map((image, index) => (
             <SwiperSlide key={index}>
-                <GatsbyImage image={image.gatsbyImageData} alt={image.alt} />
+                <GatsbyImage image={image.gatsbyImageData} alt={image.alt}/>
             </SwiperSlide>
         ))}
     </Swiper>
-)
+}

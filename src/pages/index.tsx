@@ -42,7 +42,7 @@ const IndexPage = ({data}) => {
               </main>}
             <main className="full" style={isAnimationViewed ? containerShowStyle : containerHiddenStyle}>
                 <Header/>
-                <SwiperHomeGallery images={images}/>
+                {isAnimationViewed && <SwiperHomeGallery images={images} />}
             </main>
             {isAnimationViewed && <CookieLawBanner/>}
         </>
