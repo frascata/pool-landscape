@@ -35,17 +35,27 @@ const IndexPage = ({data}) => {
 
     const images = data.images.edges.map((edge) => ({gatsbyImageData: edge.node.gatsbyImageData, alt: edge.node.id}))
 
-    return (<>
-            {!isAnimationViewed &&
-              <main className="full">
-                <AnimatedLogo onAnimationComplete={onAnimationComplete}/>
-              </main>}
-            <main className="full" style={isAnimationViewed ? containerShowStyle : containerHiddenStyle}>
-                <Header/>
-                {isAnimationViewed && <SwiperHomeGallery images={images} />}
-            </main>
-            {isAnimationViewed && <CookieLawBanner/>}
-        </>
+    // return (<>
+    //         {!isAnimationViewed &&
+    //           <main className="full">
+    //             <AnimatedLogo onAnimationComplete={onAnimationComplete}/>
+    //           </main>}
+    //         <main className="full" style={isAnimationViewed ? containerShowStyle : containerHiddenStyle}>
+    //             <Header/>
+    //             {isAnimationViewed && <SwiperHomeGallery images={images} />}
+    //         </main>
+    //         {isAnimationViewed && <CookieLawBanner/>}
+    //     </>
+    // )
+    return (
+        <main className="full">
+            {!isAnimationViewed && <AnimatedLogo onAnimationComplete={onAnimationComplete}/>}
+            {isAnimationViewed && <>
+              <Header/>
+              <SwiperHomeGallery images={images}/>
+              <CookieLawBanner/>
+            </>}
+        </main>
     )
 }
 
