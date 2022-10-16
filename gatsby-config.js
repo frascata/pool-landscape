@@ -1,8 +1,7 @@
 /** @type {import('gatsby).GatsbyConfig} */
 module.exports = {
-  pathPrefix: '/pool-landscape',
   siteMetadata: {
-    title: ``,
+    title: `Pool Landscape`,
     siteUrl: `https://www.pool-landscape.it`
   },
   plugins: [
@@ -30,12 +29,6 @@ module.exports = {
       }
     },
     'gatsby-plugin-sass',
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: 'UA-47378713-3'
-      }
-    },
     'gatsby-plugin-image',
     'gatsby-plugin-sitemap',
     {

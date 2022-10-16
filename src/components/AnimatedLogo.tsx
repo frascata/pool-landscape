@@ -3,6 +3,7 @@ import anime from 'animejs/lib/anime.es.js';
 import {useEffect} from "react";
 
 const ANIMATED_LOGO_ID = 'animatedLogo'
+const POOL_SVG_ICON_ID = 'POOL_SVG_ICON'
 
 const style = {
     width: '200px',
@@ -15,7 +16,7 @@ const style = {
 }
 
 const Icon = () => (
-    <svg viewBox="0 0 259.78 158.85">
+    <svg id={POOL_SVG_ICON_ID} viewBox="0 0 259.78 158.85" style={{display: 'none'}}>
         <g className="lines" fill="none" fillRule="evenodd" stroke="#1d1d1b">
             <path
                 strokeDasharray="260.32"
@@ -81,6 +82,8 @@ export const AnimatedLogo = ({onAnimationComplete}) => {
     const animation = () => {
         const animatedLogoNode = document.querySelector(`#${ANIMATED_LOGO_ID}`);
         animatedLogoNode.style.display = 'block';
+        const svgIconNode = document.querySelector(`#${POOL_SVG_ICON_ID}`);
+        svgIconNode.style.display = 'block';
 
         anime({
             targets: `#${ANIMATED_LOGO_ID} .lines path`,
@@ -95,7 +98,7 @@ export const AnimatedLogo = ({onAnimationComplete}) => {
             complete: function () {
                 fillAnimatedLogo();
                 setTimeout( () => {
-                    // animatedLogoNode.style.display = 'none';
+                    animatedLogoNode.style.display = 'none';
                     onAnimationComplete()
                 }, 400);
             },
@@ -106,7 +109,7 @@ export const AnimatedLogo = ({onAnimationComplete}) => {
         animation();
     }, []);
 
-    return <div id={ANIMATED_LOGO_ID} style={ style}>
+    return <div id={ANIMATED_LOGO_ID} style={style}>
         <Icon/>
     </div>
 }
