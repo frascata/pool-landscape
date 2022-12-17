@@ -23,7 +23,7 @@ export const query = graphql`
         }
         allGallery: allImageSharp(
             filter: { original: { src: { regex: "/project-gallery-/" } } },
-            sort: { fields: [original___src], order: ASC }
+            sort: { original: { src: ASC } }
             ) {
             edges {
                 node {

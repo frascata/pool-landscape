@@ -51,7 +51,7 @@ export default IndexPage
 
 export const query = graphql`
     {
-        images: allImageSharp(filter: { original: { src: { regex: "/home-gallery/" } } }, sort: { fields: [original___src], order: ASC }) {
+        images: allImageSharp(filter: { original: { src: { regex: "/home-gallery/" } } }, sort: { original: { src: ASC } }) {
             edges {
                 node {
                     id
