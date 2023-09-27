@@ -3,6 +3,7 @@ import {CookieNotice} from "gatsby-cookie-notice";
 
 import '../styles/components/cookie-law-banner.scss'
 
+// Update with: https://medium.com/geekculture/privacy-friendly-analytics-in-gatsbyjs-daaa2935518f
 export const CookieLawBanner = () => {
     return <CookieNotice
         backgroundWrapperClasses={'cookie-law-banner'}

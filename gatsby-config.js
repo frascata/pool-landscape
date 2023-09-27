@@ -71,6 +71,7 @@ module.exports = {
         // defines the environments where the tracking should be available  - default is ["production"]
         environments: ['production', 'development']
       }
-    }
+    },
+    'gatsby-plugin-netlify'
   ]
 }
