@@ -17,7 +17,9 @@
   "dependencies": {
     "animejs": "^3.2.1",
     "gatsby": "^5.12.5",
+    "gatsby-cookie-notice": "^1.0.6",
     "gatsby-plugin-gatsby-cloud": "^5.12.1",
+    "gatsby-plugin-gdpr-cookies": "github:andrezimpel/gatsby-plugin-gdpr-cookies",
     "gatsby-plugin-google-gtag": "^5.12.0",
     "gatsby-plugin-image": "^3.12.0",
     "gatsby-plugin-manifest": "^5.12.0",
