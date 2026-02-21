@@ -2,6 +2,8 @@
 module.exports = {
   siteMetadata: {
     title: `Pool Landscape`,
+    description: `Pool Landscape è uno studio specializzato in architettura del paesaggio. Progettiamo spazi aperti, giardini ecosostenibili e piazze urbane per enti pubblici e privati.`,
+    image: `/og-image.jpg`,
     siteUrl: `https://www.pool-landscape.it`
   },
   plugins: [
@@ -9,7 +11,7 @@ module.exports = {
       resolve: `gatsby-transformer-yaml`,
       options: {
         // Conditionally set the typeName so that we both use a lowercased and capitalized type name
-        typeName: ({node}) => {
+        typeName: ({ node }) => {
           const name = node.sourceInstanceName
           if (name === `products`) {
             return `Product`

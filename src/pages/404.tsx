@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { SEO } from "../components/seo"
 import LogoImg from "../images/logo.png";
 import '../styles/index.scss'
 
@@ -27,7 +28,6 @@ const codeStyles = {
 const NotFoundPage = () => {
   return (
     <main style={pageStyles}>
-      <title>404 Not found</title>
       <h1 style={headingStyles}>Ops pagina non trovata</h1>
       <p style={paragraphStyles}>
         Mi dispiace{" "}
@@ -57,3 +57,5 @@ const NotFoundPage = () => {
 }
 
 export default NotFoundPage
+
+export const Head = () => <SEO title="Pagina Non Trovata | Pool Landscape" />

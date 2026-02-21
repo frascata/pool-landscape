@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Layout from '../../components/layouts'
 import { ProjectsGrid } from '../../components/ProjectsGrid'
+import { SEO } from '../../components/seo'
 import '../../styles/index.scss'
 
 const ProjectsPage = ({ data }) => {
@@ -52,9 +53,8 @@ export const query = graphql`
 `
 
 export const Head = () => (
-    <>
-        <title>Pool Landscape | Progetti</title>
-        <meta name="description"
-              content="Pool landscape è un progetto creativo tra architettura e paesaggio Dal giardino, alla piazza, all’ambito urbano, affianchiamo i clienti pubblici e privati con un approccio sostenibile e una visione condivisa dello spazio aperto in relazione alle esigenze dell’abitare contemporaneo"/>
-    </>
+    <SEO
+        title="I Nostri Progetti | Pool Landscape"
+        description="Esplora il portfolio di Pool Landscape. Scopri le nostre realizzazioni di architettura del verde, giardini, parchi e piazze urbane."
+    />
 )
