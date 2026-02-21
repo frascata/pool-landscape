@@ -1,4 +1,3 @@
-
 :root {
   --swiper-theme-color: black !important;
   --swiper-navigation-color: black !important;
@@ -40,11 +39,20 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-  height: 60%;
-  top: 20%;
+  top: 120px;
+  /* Parte da sotto l'header (logo e menu) */
+  bottom: 80px;
+  /* Si ferma prima del footer/banner policy in basso */
+  height: auto;
+  /* L'altezza viene calcolata dinamicamente tra top e bottom */
+  margin-top: 0;
+  /* Rimuove l'offset negativo di default di Swiper */
+  width: 20%;
+  /* Rende anche l'area orizzontale più generosa e facile da cliccare */
+  opacity: 0 !important;
+  cursor: pointer;
 
   &::after {
-    content: none;
+    content: none !important;
   }
-
 }
