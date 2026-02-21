@@ -1,18 +1,19 @@
 // import * as React from "react"
-import React, {useState} from "react";
-import {graphql} from 'gatsby'
+import React, { useState } from "react";
+import { graphql } from 'gatsby'
 
 import Cookies from 'js-cookie'
 import Header from '../components/layouts/header'
-import {SwiperHomeGallery} from '../components/HomePageGallery'
+import { SwiperHomeGallery } from '../components/HomePageGallery'
 
-import {AnimatedLogo} from "../components/AnimatedLogo";
-import {CookieLawBanner} from "../components/CookieLawBanner";
+import { AnimatedLogo } from "../components/AnimatedLogo";
+import { CookieLawBanner } from "../components/CookieLawBanner";
+import { SEO } from "../components/seo";
 
 import '../styles/index.scss'
 
 
-const IndexPage = ({data}) => {
+const IndexPage = ({ data }) => {
     const animationCookie = Cookies.get('animation');
 
     const [isAnimationViewed, setAnimationViewed] = useState(animationCookie);
@@ -30,19 +31,19 @@ const IndexPage = ({data}) => {
 
     const onAnimationComplete = () => {
         setAnimationViewed(true)
-        Cookies.set('animation', '1', {expires: 7})
+        Cookies.set('animation', '1', { expires: 7 })
     }
 
-    const images = data.images.edges.map((edge) => ({gatsbyImageData: edge.node.gatsbyImageData, alt: edge.node.id}))
+    const images = data.images.edges.map((edge: any, i: number) => ({ gatsbyImageData: edge.node.gatsbyImageData, alt: edge.node.original?.src || `Pool Landscape project ${i}` }))
 
     return (
         <div>
             {isAnimationViewed ?
-            <main className="full" style={isAnimationViewed ? containerShowStyle: containerHiddenStyle}>
-                <Header/>
-                <SwiperHomeGallery images={images}/>
-                <CookieLawBanner/>
-            </main> : <AnimatedLogo onAnimationComplete={onAnimationComplete}/> }
+                <main className="full" style={isAnimationViewed ? containerShowStyle : containerHiddenStyle}>
+                    <Header />
+                    <SwiperHomeGallery images={images} />
+                    <CookieLawBanner />
+                </main> : <AnimatedLogo onAnimationComplete={onAnimationComplete} />}
         </div>
     )
 }
@@ -51,11 +52,14 @@ export default IndexPage
 
 export const query = graphql`
     {
-        images: allImageSharp(filter: { original: { src: { regex: "/home-gallery/" } } }, sort: { original: { src: ASC } }) {
-            edges {
-                node {
-                    id
+            images: allImageSharp(filter: { original: { src: { regex: "/home-gallery/" } } }, sort: { original: { src: ASC } }) {
+        edges {
+        node {
+        id
                     gatsbyImageData
+                    original {
+        src
+    }
                 }
             }
         }
@@ -63,9 +67,8 @@ export const query = graphql`
 `
 
 export const Head = () => (
-    <>
-        <title>Pool Landscape</title>
-        <meta name="description"
-              content="Pool landscape è un progetto creativo tra architettura e paesaggio Dal giardino, alla piazza, all’ambito urbano, affianchiamo i clienti pubblici e privati con un approccio sostenibile e una visione condivisa dello spazio aperto in relazione alle esigenze dell’abitare contemporaneo"/>
-    </>
+    <SEO
+        title="Pool Landscape | Studio di Architettura del Paesaggio e Giardini"
+        description="Pool Landscape è uno studio specializzato in architettura del paesaggio. Progettiamo spazi aperti, giardini ecosostenibili e piazze urbane per enti pubblici e privati."
+    />
 )

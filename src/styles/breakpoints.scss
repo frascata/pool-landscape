@@ -1,25 +1,26 @@
-@import "variables";
+@use "sass:map";
+@use "variables";
 
 @mixin Mobile {
-  @media (min-width: 0px) and (max-width: #{$tablet-width - 1px}) {
+  @media (min-width: 0px) and (max-width: #{variables.$tablet-width - 1px}) {
     @content;
   }
 }
 
 @mixin Tablet {
-  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+  @media (min-width: #{variables.$tablet-width}) and (max-width: #{variables.$desktop-width - 1px}) {
     @content;
   }
 }
 
 @mixin Desktop {
-  @media (min-width: #{$desktop-width}) and (max-width: #{map-get($breakpoints, large) - 1px}) {
+  @media (min-width: #{variables.$desktop-width}) and (max-width: #{map.get(variables.$breakpoints, large) - 1px}) {
     @content;
   }
 }
 
 @mixin DesktopLarge {
-  @media (min-width: #{map-get($breakpoints, large)}) {
+  @media (min-width: #{map.get(variables.$breakpoints, large)}) {
     @content;
   }
 }

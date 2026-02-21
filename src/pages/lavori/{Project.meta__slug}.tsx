@@ -1,12 +1,13 @@
 import React from 'react'
-import {graphql} from 'gatsby'
-import {ProjectView} from '../../components/ProjectView'
+import { graphql } from 'gatsby'
+import { ProjectView } from '../../components/ProjectView'
+import { SEO } from '../../components/seo'
 
-const Project = ({data}) => {
-    const {project, allGallery, allProjects} = data
+const Project = ({ data }) => {
+    const { project, allGallery, allProjects } = data
     const projectGallery = allGallery.edges.filter((edge) => edge.node.original.src.indexOf(`project-gallery-${project.meta.slug}`) !== -1)
-    const gallery = projectGallery.map((pGallery) => ({gatsbyImageData: pGallery.node.gatsbyImageData, alt: pGallery.node.id}))
-    return <ProjectView project={project} gallery={gallery} allProjects={allProjects.nodes}/>
+    const gallery = projectGallery.map((pGallery: any) => ({ gatsbyImageData: pGallery.node.gatsbyImageData, alt: pGallery.node.original?.src || pGallery.node.id }))
+    return <ProjectView project={project} gallery={gallery} allProjects={allProjects.nodes} />
 }
 
 export default Project
@@ -47,12 +48,15 @@ export const query = graphql`
     }
 `
 
-export const Head = ({data}) => {
-    const {project} = data
-    const {name, subtitle, description} = project
+export const Head = ({ data }: any) => {
+    const { project } = data
+    const { name, subtitle, description } = project
 
-    return <>
-        <title>Pool Landscape | {name}</title>
-        <meta name="description" content={`${name} | ${subtitle} : ${description}`}/>
-    </>
+    return (
+        <SEO
+            title={`Pool Landscape | ${name}`}
+            description={`${name} | ${subtitle} : ${description}`}
+            article={true}
+        />
+    )
 }

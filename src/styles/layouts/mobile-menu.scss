@@ -1,9 +1,10 @@
-@import "../breakpoints";
+@use "../breakpoints";
+@use "../variables";
 
 .mobile-menu-content {
   display: none;
 
-  @include Mobile() {
+  @include breakpoints.Mobile() {
     display: block;
   }
 
@@ -23,7 +24,7 @@
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
     border-radius: 1px;
     height: 4px;
-    background: $black;
+    background: variables.$black;
     transition: all .3s;
     position: relative;
   }

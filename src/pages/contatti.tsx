@@ -1,7 +1,8 @@
 import * as React from 'react'
-import {StaticImage} from "gatsby-plugin-image";
+import { StaticImage } from "gatsby-plugin-image";
 
 import Layout from '../components/layouts'
+import { SEO } from '../components/seo'
 import '../styles/contatti/index.scss'
 
 const ContactsPage = () => {
@@ -9,7 +10,7 @@ const ContactsPage = () => {
         <Layout>
             <main className="contacts-page">
                 <div className="col-left">
-                    <StaticImage src={'../images/contatti/contatti.jpg'} alt={'Contatti'}/>
+                    <StaticImage src={'../images/contatti/contatti.jpg'} alt={'Contatti'} />
                 </div>
                 <div className="col-right">
                     <div className="contact-email">
@@ -19,24 +20,24 @@ const ContactsPage = () => {
                         <div className="contact-col">
                             <h3>VERONA</h3>
                             <address>
-                                Caterina Gerolimetto<br/>
-                                Via Macello, 5<br/>
+                                Caterina Gerolimetto<br />
+                                Via Macello, 5<br />
                                 37121 Verona
                             </address>
                         </div>
                         <div className="contact-col">
                             <h3>BERGAMO</h3>
                             <address>
-                                Ilaria Sangaletti<br/>
-                                Via Sant’Alessandro, 34<br/>
+                                Ilaria Sangaletti<br />
+                                Via Sant’Alessandro, 34<br />
                                 24122 Bergamo
                             </address>
                         </div>
                         <div className="contact-col">
                             <h3>PESARO - AREZZO</h3>
                             <address>
-                                Elisa Frappi<br/>
-                                Via XI Febbraio, 42<br/>
+                                Elisa Frappi<br />
+                                Via XI Febbraio, 42<br />
                                 61122 Pesaro
                             </address>
                         </div>
@@ -50,9 +51,8 @@ const ContactsPage = () => {
 export default ContactsPage
 
 export const Head = () => (
-    <>
-        <title>Pool Landscape | Contatti</title>
-        <meta name="description"
-              content="Pool landscape è un progetto creativo tra architettura e paesaggio Dal giardino, alla piazza, all’ambito urbano, affianchiamo i clienti pubblici e privati con un approccio sostenibile e una visione condivisa dello spazio aperto in relazione alle esigenze dell’abitare contemporaneo"/>
-    </>
+    <SEO
+        title="Contatti | Pool Landscape - Studi a Verona, Bergamo e Pesaro"
+        description="Richiedi una consulenza a Pool Landscape per il tuo progetto di architettura e verde sostenibile. Sedi attive a Verona, Bergamo e Pesaro."
+    />
 )

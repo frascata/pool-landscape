@@ -1,14 +1,15 @@
 import * as React from 'react'
-import {StaticImage} from "gatsby-plugin-image";
+import { StaticImage } from "gatsby-plugin-image";
 
 import Layout from '../components/layouts'
+import { SEO } from '../components/seo'
 import '../styles/about/index.scss'
 
 const AboutPage = () => {
     return (
         <Layout>
             <main className="about-page">
-                <StaticImage className="floated" src={'../images/profilo/profilo.jpg'} alt={'Profilo'}/>
+                <StaticImage className="floated" src={'../images/profilo/profilo.jpg'} alt={'Profilo'} />
                 <p>
                     Pool landscape è un progetto creativo tra architettura e paesaggio, fondato da Caterina Gerolimetto, Elisa Frappi e Ilaria Sangaletti. Saper cogliere lo spirito del luogo,
                     la sua storia e reinterpretarne le
@@ -23,10 +24,10 @@ const AboutPage = () => {
                 <p>
                     Dal giardino, alla piazza, all’ambito urbano, affianchiamo i clienti pubblici e privati con un approccio sostenibile e una visione condivisa dello spazio aperto in
                     relazione alle esigenze dell’
-                    <strong>abitare contemporaneo.</strong> <br/>
+                    <strong>abitare contemporaneo.</strong> <br />
                     Con il nostro <strong>approccio multidisciplinare</strong> affrontiamo diversi aspetti della progettazione che vanno dal design, agli aspetti agronomici, alla scelta di
                     materiali e arredi, in un processo di trasformazione degli spazi
-                    aperti. <br/>
+                    aperti. <br />
                     <strong>Dinamismo, velocità, e presenza diffusa sul territorio</strong> (Veneto, Lombardia, Marche, Toscana) ci permettono di rispondere tempestivamente alle esigenze del
                     cliente, affiancandolo anche nella fase realizzativa,
                     attraverso un attento coordinamento del cantiere nelle sue diverse fasi. Dalla raccolta delle esigenze del cliente e dall’analisi del luogo, nascono le nostre riflessioni,
@@ -49,9 +50,8 @@ const AboutPage = () => {
 export default AboutPage
 
 export const Head = () => (
-    <>
-        <title>Pool Landscape | Profilo</title>
-        <meta name="description"
-              content="Pool landscape è un progetto creativo tra architettura e paesaggio Dal giardino, alla piazza, all’ambito urbano, affianchiamo i clienti pubblici e privati con un approccio sostenibile e una visione condivisa dello spazio aperto in relazione alle esigenze dell’abitare contemporaneo"/>
-    </>
+    <SEO
+        title="Chi Siamo | Pool Landscape - Architetti Paesaggisti Multidisciplinari"
+        description="Scopri le menti dietro Pool Landscape: Caterina Gerolimetto, Elisa Frappi e Ilaria Sangaletti. Progettazione paesaggistica in Veneto, Lombardia, Marche e Toscana."
+    />
 )

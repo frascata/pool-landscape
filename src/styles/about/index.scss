@@ -1,16 +1,16 @@
-@import "../global";
-@import "../variables";
-@import "../breakpoints";
+@use "../global";
+@use "../variables";
+@use "../breakpoints";
 
 main {
   &.about-page {
     .floated {
       float: left;
       width: 400px;
-      margin-right: $default-margin;
-      margin-bottom: $default-margin;
+      margin-right: variables.$default-margin;
+      margin-bottom: variables.$default-margin;
 
-      @include Mobile() {
+      @include breakpoints.Mobile() {
         width: 100%;
       }
     }

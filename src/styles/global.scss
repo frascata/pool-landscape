@@ -1,4 +1,4 @@
-@import "variables";
+@use "variables";
 
 * {
   font-family: "Roboto", sans-serif;
@@ -16,7 +16,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: $text-color;
+  color: variables.$text-color;
   margin: 0;
   padding: 0;
 }
@@ -31,10 +31,10 @@ strong {
 }
 
 a {
-  color: $black;
+  color: variables.$black;
   text-decoration: none;
 
   &:hover, &:focus {
-    color: $grey;
+    color: variables.$grey;
   }
 }

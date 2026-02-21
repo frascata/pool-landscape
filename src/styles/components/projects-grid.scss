@@ -1,13 +1,13 @@
-@import "../variables";
-@import "../breakpoints";
+@use "../variables";
+@use "../breakpoints";
 
 .grid-container {
   display: grid;
-  grid-gap: $default-margin;
-  grid-template-columns: repeat(2, calc(50% - #{$default-margin}));
+  grid-gap: variables.$default-margin;
+  grid-template-columns: repeat(2, calc(50% - #{variables.$default-margin}));
   width: 100%;
 
-  @include Mobile() {
+  @include breakpoints.Mobile() {
     grid-template-columns: 100%;
     width: 100%;
   }
@@ -38,7 +38,7 @@
         left: 0;
         padding-top: 48%;
         text-align: center;
-        color: $black;
+        color: variables.$black;
         visibility: hidden;
         background-color: rgba(255, 255, 255, 0.9);
         opacity: 0;

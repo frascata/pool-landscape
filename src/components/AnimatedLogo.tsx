@@ -1,11 +1,11 @@
 import * as React from 'react'
 import anime from 'animejs/lib/anime.es.js';
-import {useEffect} from "react";
+import { useEffect } from "react";
 
 const ANIMATED_LOGO_ID = 'animatedLogo'
 const POOL_SVG_ICON_ID = 'POOL_SVG_ICON'
 
-const style = {
+const style: React.CSSProperties = {
     width: '200px',
     position: 'absolute',
     top: '40%',
@@ -16,7 +16,7 @@ const style = {
 }
 
 const Icon = () => (
-    <svg id={POOL_SVG_ICON_ID} viewBox="0 0 259.78 158.85" style={{display: 'none'}}>
+    <svg id={POOL_SVG_ICON_ID} viewBox="0 0 259.78 158.85" style={{ display: 'none' }}>
         <g className="lines" fill="none" fillRule="evenodd" stroke="#1d1d1b">
             <path
                 strokeDasharray="260.32"
@@ -68,38 +68,42 @@ const Icon = () => (
     </svg>
 );
 
-export const AnimatedLogo = ({onAnimationComplete}) => {
+export const AnimatedLogo = ({ onAnimationComplete }: { onAnimationComplete: () => void }) => {
 
     const fillAnimatedLogo = () => {
         const SVG_COLOR = '#1d1d1b';
         const animatedLogoNode = document.querySelector(`#${ANIMATED_LOGO_ID}`);
-        const svgPaths = animatedLogoNode?.querySelectorAll('svg path');
-        for (const svgPath of svgPaths) {
+        if (!animatedLogoNode) return;
+        const svgPaths = animatedLogoNode.querySelectorAll('svg path');
+        svgPaths.forEach(svgPath => {
             svgPath.setAttribute('fill', SVG_COLOR);
-        }
+        });
     }
 
     const animation = () => {
-        const animatedLogoNode = document.querySelector(`#${ANIMATED_LOGO_ID}`);
+        const animatedLogoNode = document.querySelector(`#${ANIMATED_LOGO_ID}`) as HTMLElement | null;
+        if (!animatedLogoNode) return;
         animatedLogoNode.style.display = 'block';
-        const svgIconNode = document.querySelector(`#${POOL_SVG_ICON_ID}`);
-        svgIconNode.style.display = 'block';
+        const svgIconNode = document.querySelector(`#${POOL_SVG_ICON_ID}`) as HTMLElement | null;
+        if (svgIconNode) {
+            svgIconNode.style.display = 'block';
+        }
 
         anime({
             targets: `#${ANIMATED_LOGO_ID} .lines path`,
             strokeDashoffset: [anime.setDashoffset, 0],
             easing: 'easeInOutSine',
             duration: 1500,
-            delay: (el, i) => {
+            delay: (el: any, i: number) => {
                 return i * 150;
             },
             direction: 'normal',
             loop: 1,
             complete: function () {
                 fillAnimatedLogo();
-                setTimeout( () => {
+                setTimeout(() => {
                     animatedLogoNode.style.display = 'none';
-                    onAnimationComplete()
+                    if (onAnimationComplete) onAnimationComplete();
                 }, 400);
             },
         });
@@ -110,6 +114,6 @@ export const AnimatedLogo = ({onAnimationComplete}) => {
     }, []);
 
     return <div id={ANIMATED_LOGO_ID} style={style}>
-        <Icon/>
+        <Icon />
     </div>
 }
