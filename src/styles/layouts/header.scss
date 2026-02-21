@@ -1,10 +1,10 @@
-@import "../variables";
-@import "../breakpoints";
-@import "mobile-menu";
+@use "../variables";
+@use "../breakpoints";
+@use "mobile-menu";
 
 header {
-  width: calc(100% - #{$default-page-margin}*2);
-  margin: $default-page-margin;
+  width: calc(100% - #{variables.$default-page-margin}*2);
+  margin: variables.$default-page-margin;
 
   .container {
     display: flex;
@@ -19,7 +19,7 @@ header {
 
     .navbar {
       display: flex;
-      @include Mobile() {
+      @include breakpoints.Mobile() {
         display: none;
       }
 
@@ -28,13 +28,13 @@ header {
         padding: 20px;
 
         a {
-          color: $black;
+          color: variables.$black;
           font-weight: bold;
           text-decoration: none;
           text-transform: uppercase;
 
           &:hover, &:focus {
-            color: $grey;
+            color: variables.$grey;
           }
         }
       }

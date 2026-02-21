@@ -1,22 +1,22 @@
-@import "../variables";
-@import "../breakpoints";
+@use "../variables";
+@use "../breakpoints";
 
 .project-navigation {
   padding: 30px 30px 10px;
   text-align: center;
 
-  @include Mobile() {
+  @include breakpoints.Mobile() {
     padding: 30px 0 10px 0;
     line-height: 30px;
   }
 
   a {
     padding-right: 20px;
-    color: $grey;
+    color: variables.$grey;
     text-decoration: none;
 
     &.active, &:hover {
-      color: $black;
+      color: variables.$black;
       text-decoration: none;
     }
   }

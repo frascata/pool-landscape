@@ -1,9 +1,9 @@
-@import "../variables";
+@use "../variables";
 
 footer {
-  width: calc(100% - #{$default-page-margin}*2);
-  margin: $default-page-margin;
-  border-top: 1px solid $black;
+  width: calc(100% - #{variables.$default-page-margin}*2);
+  margin: variables.$default-page-margin;
+  border-top: 1px solid variables.$black;
   padding-top: 10px;
   padding-bottom: 10px;
 
@@ -25,10 +25,10 @@ footer {
 
     a {
       text-decoration: none;
-      color: $text-color;
+      color: variables.$text-color;
 
       &:hover {
-        color: $black;
+        color: variables.$black;
       }
     }
   }

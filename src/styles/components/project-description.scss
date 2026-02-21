@@ -1,5 +1,5 @@
-@import "../variables";
-@import "../breakpoints";
+@use "../variables";
+@use "../breakpoints";
 
 .project-description {
   padding: 30px;
@@ -7,7 +7,7 @@
   padding-left: 15%;
   padding-right: 15%;
 
-  @include Mobile() {
+  @include breakpoints.Mobile() {
     padding-left: 0;
     padding-right: 0;
   }

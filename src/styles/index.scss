@@ -1,25 +1,25 @@
-@import "global";
-@import "variables";
-@import "breakpoints";
+@use "global";
+@use "variables";
+@use "breakpoints";
 
 main {
-  width: calc(100% - #{$default-page-margin} * 2);
-  margin: $default-page-margin;
+  width: calc(100% - #{variables.$default-page-margin} * 2);
+  margin: variables.$default-page-margin;
   min-height: 500px;
 
   &.full {
     position: absolute;
-    width: calc(100% - #{$homepage-margin} * 2);
-    height: calc(100% - #{$homepage-margin} * 2);
+    width: calc(100% - #{variables.$homepage-margin} * 2);
+    height: calc(100% - #{variables.$homepage-margin} * 2);
     margin: 0;
-    top: $homepage-margin;
-    left: $homepage-margin;
+    top: variables.$homepage-margin;
+    left: variables.$homepage-margin;
 
     header {
       position: absolute;
-      width: calc(100% - #{$homepage-margin} * 2);
+      width: calc(100% - #{variables.$homepage-margin} * 2);
       z-index: 2;
-      margin: $homepage-margin;
+      margin: variables.$homepage-margin;
 
       .mobile-menu-content .mobile-menu-btn {
         top: 40px;
